@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>TV Slayt</title>
+<style>
+body {
+  margin:0;
+  background:black;
+}
+img {
+  width:100vw;
+  height:100vh;
+  object-fit:cover;
+}
+</style>
+</head>
+<body>
+
+<img id="slide" src="https://i.imgur.com/XXXX.jpg">
+
+<script>
+var images = [
+"https://i.imgur.com/XXXX.jpg",
+"https://i.imgur.com/YYYY.jpg",
+"https://i.imgur.com/ZZZZ.jpg"
+];
+
+var index = 0;
+
+setInterval(function(){
+  index++;
+  if(index >= images.length) index = 0;
+  document.getElementById("slide").src = images[index];
+}, 5000);
+</script>
+
+</body>
+</html>
